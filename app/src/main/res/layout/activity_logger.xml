@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.daya.logger.sample.LoggerActivity">
+
+    <TabHost
+        android:id="@+id/loggerTabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <fragment
+                    android:id="@+id/toast_logger_fragment"
+                    android:name="com.daya.logger.sample.fragment.ToastLoggerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <fragment
+                    android:id="@+id/instance_logger_fragment"
+                    android:name="com.daya.logger.sample.fragment.InstanceLoggerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <fragment
+                    android:id="@+id/crash_logger_fragment"
+                    android:name="com.daya.logger.sample.fragment.CrashLoggerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+</RelativeLayout>
