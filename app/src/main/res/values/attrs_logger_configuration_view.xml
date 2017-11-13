@@ -1,5 +1,5 @@
 <resources>
-    <declare-styleable name="LoggerConfigurationView">
+    <declare-styleable name="MainLoggerConfigurationView">
         <attr name="settingsVisibility" format="boolean" />
     </declare-styleable>
 </resources>

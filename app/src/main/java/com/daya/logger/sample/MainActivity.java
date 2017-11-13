@@ -8,13 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import com.daya.logger.sample.fragment.CrashLoggerFragment;
 import com.daya.logger.sample.fragment.configuration.InstanceLoggerConfigurationFragment;
 import com.daya.logger.sample.fragment.InstanceLoggerFragment;
-import com.daya.logger.sample.fragment.configuration.MainLoggerConfigurationFragment;
+import com.daya.logger.sample.fragment.configuration.LoggerConfigurationFragment;
 import com.daya.logger.sample.fragment.MainLoggerFragment;
 import com.daya.logger.sample.fragment.configuration.ToastLoggerConfigurationFragment;
 import com.daya.logger.sample.fragment.ToastLoggerFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements MainLoggerConfigurationFragment.OnStartListener,
+        implements LoggerConfigurationFragment.OnStartListener,
         ToastLoggerConfigurationFragment.OnFragmentInteractionListener,
         InstanceLoggerConfigurationFragment.OnFragmentInteractionListener,
         ToastLoggerFragment.OnToastLoggerFragmentListener,
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.fragment_container, MainLoggerConfigurationFragment.newInstance("a", "b"))
+                .add(R.id.fragment_container, LoggerConfigurationFragment.newInstance("a", "b"))
                 .commit();
     }
 

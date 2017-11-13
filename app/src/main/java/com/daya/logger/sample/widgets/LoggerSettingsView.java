@@ -39,6 +39,10 @@ public class LoggerSettingsView extends LinearLayout {
                 attrs, R.styleable.LoggerSettingsView, defStyle, 0);
 
         LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        if (layoutInflater == null) {
+            return;
+        }
+
         View v = layoutInflater.inflate(R.layout.layout_logger_settings, this, false);
         addView(v);
 
