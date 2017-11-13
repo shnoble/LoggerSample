@@ -68,7 +68,7 @@ public class MainLoggerConfigurationFragment extends Fragment {
         TabHost loggerTab = view.findViewById(R.id.loggerTabHost);
         loggerTab.setup();
 
-        TabHost.TabSpec toastLoggerTabSpec = loggerTab.newTabSpec("toast_logger_configruation")
+        TabHost.TabSpec toastLoggerTabSpec = loggerTab.newTabSpec("toast_logger_configuration")
                 .setContent(R.id.toast_logger_configuration_fragment)
                 .setIndicator("TOAST");
         loggerTab.addTab(toastLoggerTabSpec);

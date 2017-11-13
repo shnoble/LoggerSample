@@ -65,7 +65,7 @@ public class ToastLoggerConfigurationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_toast_logger_configuration, container, false);
+        return inflater.inflate(R.layout.layout_configuration_logger_toast, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

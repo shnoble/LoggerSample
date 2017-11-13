@@ -34,7 +34,7 @@ public class LoggerConfigurationView extends LinearLayout {
                 attrs, R.styleable.LoggerConfigurationView, defStyle, 0);
 
         LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = layoutInflater.inflate(R.layout.layout_logger_configuration, this, false);
+        View v = layoutInflater.inflate(R.layout.layout_configuration_logger_main, this, false);
         addView(v);
 
         boolean settingsVisibility =
