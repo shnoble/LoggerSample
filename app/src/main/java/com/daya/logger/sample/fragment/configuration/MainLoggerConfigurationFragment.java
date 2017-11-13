@@ -1,4 +1,4 @@
-package com.daya.logger.sample.fragment;
+package com.daya.logger.sample.fragment.configuration;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,10 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TabHost;
 
 import com.daya.logger.sample.R;
 
-public class LoggerConfigurationFragment extends Fragment {
+public class MainLoggerConfigurationFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -22,7 +23,7 @@ public class LoggerConfigurationFragment extends Fragment {
 
     private OnStartListener mListener;
 
-    public LoggerConfigurationFragment() {
+    public MainLoggerConfigurationFragment() {
         // Required empty public constructor
     }
 
@@ -32,11 +33,11 @@ public class LoggerConfigurationFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LoggerConfigurationFragment.
+     * @return A new instance of fragment MainLoggerConfigurationFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LoggerConfigurationFragment newInstance(String param1, String param2) {
-        LoggerConfigurationFragment fragment = new LoggerConfigurationFragment();
+    public static MainLoggerConfigurationFragment newInstance(String param1, String param2) {
+        MainLoggerConfigurationFragment fragment = new MainLoggerConfigurationFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -57,12 +58,25 @@ public class LoggerConfigurationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_logger_configuration, container, false);
+        return inflater.inflate(R.layout.fragment_main_logger_configuration, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        TabHost loggerTab = view.findViewById(R.id.loggerTabHost);
+        loggerTab.setup();
+
+        TabHost.TabSpec toastLoggerTabSpec = loggerTab.newTabSpec("toast_logger_configruation")
+                .setContent(R.id.toast_logger_configuration_fragment)
+                .setIndicator("TOAST");
+        loggerTab.addTab(toastLoggerTabSpec);
+
+        TabHost.TabSpec instanceLoggerTabSpec = loggerTab.newTabSpec("instance_logger_configuration")
+                .setContent(R.id.instance_logger_configuration_fragment)
+                .setIndicator("Instance");
+        loggerTab.addTab(instanceLoggerTabSpec);
 
         view.findViewById(R.id.start_button).setOnClickListener(new View.OnClickListener() {
             @Override

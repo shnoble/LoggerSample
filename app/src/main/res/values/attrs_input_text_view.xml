@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="InputTextView">
+        <attr name="inputTextTitle" format="string|reference" />
+        <attr name="inputTextHint" format="string|reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="logger_settings_type">
+        <item>Console</item>
+        <item>User</item>
+        <item>Default</item>
+    </string-array>
+</resources>
