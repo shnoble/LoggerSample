@@ -12,13 +12,14 @@
         android:textStyle="bold"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
-        android:text="Project Settings"/>
+        android:text="Log Settings"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -26,14 +27,11 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:textSize="14sp"
-            android:text="Project Key" />
+            android:text="Normal Log" />
 
-        <EditText
-            android:id="@+id/project_key_edit_text"
+        <Switch
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:hint="Input project key..." />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -47,6 +45,7 @@
         android:layout_height="40dp"
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -54,14 +53,11 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:textSize="14sp"
-            android:text="Project Version" />
+            android:text="Session Log" />
 
-        <EditText
-            android:id="@+id/project_version_edit_text"
+        <Switch
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:hint="Input project version..." />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -71,11 +67,11 @@
         android:background="#f6f6f6"/>
 
     <LinearLayout
-        android:id="@+id/settings_layout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -83,13 +79,11 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:textSize="14sp"
-            android:text="Settings" />
+            android:text="Crash Log" />
 
-        <Spinner
-            android:id="@+id/settings_type_spinner"
+        <Switch
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/logger_settings_type" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

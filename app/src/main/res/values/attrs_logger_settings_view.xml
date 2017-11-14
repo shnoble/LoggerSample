@@ -1,5 +1,5 @@
 <resources>
-    <declare-styleable name="LoggerSettingsView">
-
+    <declare-styleable name="ProjectSettingsView">
+        <attr name="isSettingsVisibility" format="boolean" />
     </declare-styleable>
 </resources>

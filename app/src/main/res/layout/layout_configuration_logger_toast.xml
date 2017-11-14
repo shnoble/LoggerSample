@@ -1,13 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <com.daya.logger.sample.widgets.ProjectSettingsView
+    <com.daya.logger.sample.widgets.configuration.settings.ProjectSettingsView
         android:id="@+id/project_settings_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </com.daya.logger.sample.widgets.ProjectSettingsView>
+        android:layout_height="wrap_content"
+        app:isSettingsVisibility="false">
+    </com.daya.logger.sample.widgets.configuration.settings.ProjectSettingsView>
 
 </LinearLayout>

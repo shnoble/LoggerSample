@@ -1,4 +1,4 @@
-package com.daya.logger.sample.fragment.configuration;
+package com.daya.logger.sample.widgets.configuration;
 
 import android.content.Context;
 import android.os.Bundle;

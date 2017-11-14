@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.daya.logger.sample.R;
+import com.daya.logger.sample.widgets.configuration.settings.ProjectSettingsView;
 
 /**
  * Created by Shnoble on 2017. 11. 14..
@@ -17,20 +18,20 @@ public class ToastLoggerConfigurationView extends LinearLayout {
 
     public ToastLoggerConfigurationView(Context context) {
         super(context);
-        init(null, 0);
+        init();
     }
 
     public ToastLoggerConfigurationView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(attrs, 0);
+        init();
     }
 
     public ToastLoggerConfigurationView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init(attrs, defStyle);
+        init();
     }
 
-    private void init(AttributeSet attrs, int defStyle) {
+    private void init() {
         LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (layoutInflater == null) {
             return;

@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="Duplicate Filter" />
+
+        <Switch
+            android:id="@+id/enabled_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expired_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="Expired Time" />
+
+        <EditText
+            android:id="@+id/expired_time_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="2"
+            android:hint="2~120" />
+
+    </LinearLayout>
 
 </LinearLayout>

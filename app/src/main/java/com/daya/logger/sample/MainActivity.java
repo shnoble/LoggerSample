@@ -1,25 +1,22 @@
 package com.daya.logger.sample;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.daya.logger.sample.fragment.CrashLoggerFragment;
-import com.daya.logger.sample.fragment.configuration.InstanceLoggerConfigurationFragment;
 import com.daya.logger.sample.fragment.InstanceLoggerFragment;
-import com.daya.logger.sample.fragment.configuration.LoggerConfigurationFragment;
 import com.daya.logger.sample.fragment.MainLoggerFragment;
-import com.daya.logger.sample.fragment.configuration.ToastLoggerConfigurationFragment;
 import com.daya.logger.sample.fragment.ToastLoggerFragment;
+import com.daya.logger.sample.widgets.configuration.LoggerConfigurationFragment;
 
 public class MainActivity extends AppCompatActivity
         implements LoggerConfigurationFragment.OnStartListener,
-        ToastLoggerConfigurationFragment.OnFragmentInteractionListener,
-        InstanceLoggerConfigurationFragment.OnFragmentInteractionListener,
         ToastLoggerFragment.OnToastLoggerFragmentListener,
         InstanceLoggerFragment.OnInstanceLoggerFragmentListener,
         CrashLoggerFragment.OnCrashLoggerFragmentListener {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +49,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onInstanceLoggerFragmentInteraction() {
-
-    }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
 
     }
 }

@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="Type Filter" />
+
+        <Switch
+            android:id="@+id/enabled_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="Types" />
+
+        <com.daya.logger.sample.widgets.configuration.settings.TypeListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.daya.logger.sample.widgets.configuration.settings.TypeListView>
+
+    </LinearLayout>
 
 </LinearLayout>
