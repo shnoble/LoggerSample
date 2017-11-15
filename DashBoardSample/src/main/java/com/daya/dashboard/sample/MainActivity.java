@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
                 mDashBoard.increaseFailedCount();
             }
         });
+
+        findViewById(R.id.clear_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDashBoard.clear();
+            }
+        });
     }
 
 
