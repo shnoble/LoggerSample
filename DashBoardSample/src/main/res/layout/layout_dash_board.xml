@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border_dash_board"
+    android:orientation="horizontal">
+
+    <com.daya.dashboard.sample.widgets.CounterView
+        android:id="@+id/tried_counter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:counterColor="#0000f2"
+        app:counterName="TRIED"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#e2e2e2"/>
+
+    <com.daya.dashboard.sample.widgets.CounterView
+        android:id="@+id/succeed_counter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:counterColor="#00f200"
+        app:counterName="SUCCEED"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#e2e2e2"/>
+
+    <com.daya.dashboard.sample.widgets.CounterView
+        android:id="@+id/saved_counter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:counterColor="#979797"
+        app:counterName="SAVED"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#e2e2e2"/>
+
+    <com.daya.dashboard.sample.widgets.CounterView
+        android:id="@+id/filtered_counter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:counterColor="#996633"
+        app:counterName="FILTERED"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#e2e2e2"/>
+
+    <com.daya.dashboard.sample.widgets.CounterView
+        android:id="@+id/failed_counter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:counterColor="#f20000"
+        app:counterName="FAILED"
+        />
+
+</LinearLayout>

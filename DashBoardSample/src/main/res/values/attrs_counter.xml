@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="CounterView">
+        <attr name="counterName" format="string|reference"/>
+        <attr name="counterColor" format="color|reference"/>
+    </declare-styleable>
+</resources>

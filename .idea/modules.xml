@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DashBoardSample/DashBoardSample.iml" filepath="$PROJECT_DIR$/DashBoardSample/DashBoardSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/LoggerSample.iml" filepath="$PROJECT_DIR$/LoggerSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
