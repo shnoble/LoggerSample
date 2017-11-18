@@ -1,1 +1,1 @@
-include ':app', ':DashBoardSample'
+include ':app', ':DashBoardSample', ':DeletableListViewSample'
