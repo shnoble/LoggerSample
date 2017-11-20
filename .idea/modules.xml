@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DashBoardSample/DashBoardSample.iml" filepath="$PROJECT_DIR$/DashBoardSample/DashBoardSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/DeletableListViewSample/DeletableListViewSample.iml" filepath="$PROJECT_DIR$/DeletableListViewSample/DeletableListViewSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LogTypesListSample/LogTypesListSample.iml" filepath="$PROJECT_DIR$/LogTypesListSample/LogTypesListSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/LoggerSample.iml" filepath="$PROJECT_DIR$/LoggerSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

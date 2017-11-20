@@ -14,17 +14,15 @@ import com.daya.dashboard.sample.R;
  */
 
 public class DashBoardView extends LinearLayout {
-    private CounterView mTriedCounterView;
-    private CounterView mSucceedCounterView;
-    private CounterView mSavedCounterView;
-    private CounterView mFilteredCounterView;
-    private CounterView mFailedCounterView;
+    public static final int TRIED_COUNTER = 0;
+    public static final int SUCCEED_COUNTER = 1;
+    public static final int SAVED_COUNTER = 2;
+    public static final int FILTERED_COUNTER = 3;
+    public static final int FAILED_COUNTER = 4;
+    public static final int COUNTER_COUNT = 5;
 
-    private int mTriedCount = 0;
-    private int mSucceedCount = 0;
-    private int mSavedCount = 0;
-    private int mFilteredCount = 0;
-    private int mFailedCount = 0;
+    private CounterView[] mCounterViews;
+    private int[] mCounts;
 
     public DashBoardView(Context context) {
         super(context);
@@ -50,63 +48,27 @@ public class DashBoardView extends LinearLayout {
         View view = layoutInflater.inflate(R.layout.layout_dash_board, this, false);
         addView(view);
 
-        mTriedCounterView = (CounterView) findViewById(R.id.tried_counter);
-        mSucceedCounterView = (CounterView) findViewById(R.id.succeed_counter);
-        mSavedCounterView = (CounterView) findViewById(R.id.saved_counter);
-        mFilteredCounterView = (CounterView) findViewById(R.id.filtered_counter);
-        mFailedCounterView = (CounterView) findViewById(R.id.failed_counter);
+        mCounts = new int[COUNTER_COUNT];
+        mCounterViews = new CounterView[COUNTER_COUNT];
+        mCounterViews[TRIED_COUNTER] = (CounterView) findViewById(R.id.tried_counter);
+        mCounterViews[SUCCEED_COUNTER] = (CounterView) findViewById(R.id.succeed_counter);
+        mCounterViews[SAVED_COUNTER] = (CounterView) findViewById(R.id.saved_counter);
+        mCounterViews[FILTERED_COUNTER] = (CounterView) findViewById(R.id.filtered_counter);
+        mCounterViews[FAILED_COUNTER] = (CounterView) findViewById(R.id.failed_counter);
     }
 
-    public void setTriedCount(int count) {
-        mTriedCounterView.setCount(count);
-        mTriedCount = count;
+    public void setCount(int viewId, int count) {
+        mCounterViews[viewId].setCount(count);
+        mCounts[viewId] = count;
     }
 
-    public void setSucceedCount(int count) {
-        mSucceedCounterView.setCount(count);
-        mSucceedCount = count;
-    }
-
-    public void setSavedCount(int count) {
-        mSavedCounterView.setCount(count);
-        mSavedCount = count;
-    }
-
-    public void setFilteredCount(int count) {
-        mFilteredCounterView.setCount(count);
-        mFilteredCount = count;
-    }
-
-    public void setFailedCount(int count) {
-        mFailedCounterView.setCount(count);
-        mFailedCount = count;
-    }
-
-    public void increaseTriedCount() {
-        setTriedCount(mTriedCount + 1);
-    }
-
-    public void increaseSucceedCount() {
-        setSucceedCount(mSucceedCount + 1);
-    }
-
-    public void increaseSavedCount() {
-        setSavedCount(mSavedCount + 1);
-    }
-
-    public void increaseFilteredCount() {
-        setFilteredCount(mFilteredCount + 1);
-    }
-
-    public void increaseFailedCount() {
-        setFailedCount(mFailedCount + 1);
+    public void increaseCount(int viewId) {
+        setCount(viewId, mCounts[viewId] + 1);
     }
 
     public void clear() {
-        setTriedCount(0);
-        setSucceedCount(0);
-        setSavedCount(0);
-        setFilteredCount(0);
-        setFailedCount(0);
+        for (int i = 0; i < COUNTER_COUNT; i++) {
+            setCount(i, 0);
+        }
     }
 }

@@ -1,7 +1,7 @@
 package com.daya.dashboard.sample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.daya.dashboard.sample.widgets.DashBoardView;
@@ -17,44 +17,44 @@ public class MainActivity extends AppCompatActivity {
 
         mDashBoard = findViewById(R.id.dash_board);
 
-        mDashBoard.setTriedCount(1);
-        mDashBoard.setSucceedCount(2);
-        mDashBoard.setSavedCount(3);
-        mDashBoard.setFilteredCount(4);
-        mDashBoard.setFailedCount(5);
+        mDashBoard.setCount(DashBoardView.TRIED_COUNTER, 1);
+        mDashBoard.setCount(DashBoardView.SUCCEED_COUNTER, 2);
+        mDashBoard.setCount(DashBoardView.SAVED_COUNTER, 3);
+        mDashBoard.setCount(DashBoardView.FILTERED_COUNTER, 4);
+        mDashBoard.setCount(DashBoardView.FAILED_COUNTER, 5);
 
         findViewById(R.id.increase_tried_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDashBoard.increaseTriedCount();
+                mDashBoard.increaseCount(DashBoardView.TRIED_COUNTER);
             }
         });
 
         findViewById(R.id.increase_succeed_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDashBoard.increaseSucceedCount();
+                mDashBoard.increaseCount(DashBoardView.SUCCEED_COUNTER);
             }
         });
 
         findViewById(R.id.increase_saved_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDashBoard.increaseSavedCount();
+                mDashBoard.increaseCount(DashBoardView.SAVED_COUNTER);
             }
         });
 
         findViewById(R.id.increase_filtered_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDashBoard.increaseFilteredCount();
+                mDashBoard.increaseCount(DashBoardView.FILTERED_COUNTER);
             }
         });
 
         findViewById(R.id.increase_failed_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDashBoard.increaseFailedCount();
+                mDashBoard.increaseCount(DashBoardView.FAILED_COUNTER);
             }
         });
 
